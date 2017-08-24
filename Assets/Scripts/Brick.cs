@@ -4,11 +4,11 @@ using System.Collections;
 public class Brick : MonoBehaviour {
 
 	public Sprite[] bricks;
+	public static int brickCount = 0;
 	
 	private LevelManager levelManager;
 	private int timesHit;
 	private bool isBreakable;
-	private static int brickCount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -29,8 +29,8 @@ public class Brick : MonoBehaviour {
 		timesHit++;
 			
 		if (timesHit == maxHits) {
-			Destroy(gameObject);
 			brickCount--;
+			Destroy(gameObject);
 			Debug.Log (brickCount);
 				
 			if (brickCount <= 0) {
