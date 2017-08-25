@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Ball : MonoBehaviour {
 
+
 	private Vector3 paddleToBallVector;
 	private Paddle paddle;
 	private bool hasStarted;
@@ -30,6 +31,7 @@ public class Ball : MonoBehaviour {
 		Vector2 tweak = new Vector2 (.2f, .2f);
 		
 		if (hasStarted) {
+			audio.Play();
 			rigidbody2D.velocity += tweak;
 		}
 	}
