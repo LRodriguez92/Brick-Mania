@@ -27,16 +27,21 @@ public class Brick : MonoBehaviour {
 
 	
 	void OnCollisionEnter2D (Collision2D coll) {
-		int maxHits = bricks.Length + 1;
 		timesHit++;
 		AudioSource.PlayClipAtPoint(crack, this.transform.position, .4f);
-			
+		handleHits();
+	}
+	
+	// Handles the brick count and the destruction of the bricks
+	void handleHits () {
+		int maxHits = bricks.Length + 1;
+		
 		if (timesHit == maxHits) {
 			brickCount--;
 			puffSmoke();
 			Destroy(gameObject);
 			Debug.Log (brickCount);
-				
+			
 			if (brickCount <= 0) {
 				Debug.Log ("No more bricks");
 				levelManager.LoadNextLevel();
