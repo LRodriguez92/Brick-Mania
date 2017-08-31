@@ -6,6 +6,7 @@ public class Brick : MonoBehaviour {
 	public Sprite[] bricks;
 	public static int brickCount = 0;
 	public AudioClip crack;
+	public GameObject smoke;
 	
 	private LevelManager levelManager;
 	private int timesHit;
@@ -32,6 +33,7 @@ public class Brick : MonoBehaviour {
 			
 		if (timesHit == maxHits) {
 			brickCount--;
+			puffSmoke();
 			Destroy(gameObject);
 			Debug.Log (brickCount);
 				
@@ -42,6 +44,11 @@ public class Brick : MonoBehaviour {
 		} else {
 			BrickDamage();
 		}
+	}
+	
+	void puffSmoke () {
+		GameObject smokePuff = Instantiate(smoke, this.transform.position, Quaternion.identity) as GameObject;
+		smokePuff.particleSystem.startColor = this.GetComponent<SpriteRenderer>().color;
 	}
 	
 	// Changes to damaged brick sprite after every hit
