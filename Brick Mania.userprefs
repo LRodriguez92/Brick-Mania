@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball.cs">
     <Files>
-      <File FileName="Assets/Scripts/Ball.cs" Line="33" Column="34" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/LoseCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Paddle.cs" Line="18" Column="15" />
+      <File FileName="Assets/Scripts/Paddle.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Brick.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MusicPlayer.cs" Line="17" Column="40" />
+      <File FileName="Assets/Scripts/MusicPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
