@@ -5,6 +5,7 @@ public class Brick : MonoBehaviour {
 
 	public Sprite[] bricks;
 	public static int brickCount = 0;
+	public AudioClip crack;
 	
 	private LevelManager levelManager;
 	private int timesHit;
@@ -27,6 +28,7 @@ public class Brick : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D coll) {
 		int maxHits = bricks.Length + 1;
 		timesHit++;
+		AudioSource.PlayClipAtPoint(crack, this.transform.position, .4f);
 			
 		if (timesHit == maxHits) {
 			brickCount--;
